@@ -83,10 +83,37 @@ header nav .branding{
 .hero{
     padding:3rem 0;
 }
-.hero .left img{
-    width:400px;
+
+/*.hero .left img{
+    width: 400px;
+    height: auto;
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, var(--primary), var(--ternary));
+    border-image-slice: 1;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, var(--ternary), var(--dark));
+}*/
+.hero .left img {
+    width: 400px;
+    height: auto;
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, var(--primary), var(--ternary));
+    border-image-slice: 1;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, var(--ternary), var(--dark));
+    filter: brightness(1.1); /* Adjust brightness as needed */
+    transition: transform 0.3s ease; /* Add a transition effect */
 }
+
+.hero .left img:hover {
+    transform: scale(1.1); /* Add a scale effect on hover */
+}
+
 .hero .right{
+    flex: 1;
+    margin-left: 20px;
     color:var(--pure);
 }
 .hero .right h6{
@@ -111,13 +138,31 @@ header nav .branding{
     margin-top:-7rem;
 }
 
-
 section{
     padding:6rem 0;
 }
-section.about .about-me-img{
+/*section.about .about-me-img{
     height:450px;
+}*/
+section.about .about-me-img {
+    width: auto;
+    height: 450px; /* Set height to match width for a perfect circle */
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, var(--primary), var(--ternary));
+    border-image-slice: 1;
+    border-radius: 5opx;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, var(--dark), var(--ternary));
+    filter: brightness(1.2); /* Adjust brightness as needed */
+    transition: transform 0.3s ease; /* Add a transition effect */
 }
+
+section.about .about-me-img:hover {
+    transform: scale(1.1); /* Add a scale effect on hover */
+}
+
+
+
 section.about h1{
     margin-bottom: 1rem;
     font-size:1.6rem;
