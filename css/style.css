@@ -6,15 +6,12 @@
     --ternary: #898989;
     --light: #F2F2F2;
 }
-
 body{
     font-family:'Poppins',sans-serif;
 }
-
 html{
     scroll-behavior: smooth;
 }
-
 *{
     padding: 0;
     margin:0;
@@ -23,26 +20,24 @@ html{
 }
 header{
     background: var(--dark);
-    clip-path:polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);
 }
 .container{
     max-width:1152px;
     padding:0 15px;
     margin:0 auto;
 }
-
 .tab { 
     display:inline-block; 
     margin-left: 40px; 
 }
-
-@media (min-width: 576px) {
+ @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
   }
   
-  @media (min-width: 768px) {
+ @media (min-width: 768px) {
     .container {
       max-width: 720px;
     }
@@ -80,11 +75,23 @@ header nav {
 header nav .branding{
     margin-right:3rem;
 }
+header .branding img {
+    width: 60px; 
+    height: 60px; 
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(61, 207, 211, 1); 
+    transition: all 0.5s ease;
+}
+
+header .branding img:hover {
+    transform: rotate(360deg);
+}
 .hero{
     padding:3rem 0;
 }
 .hero .left img {
-    width: 400px;
+    width: 380px;
     height: auto;
     border: 10px solid transparent;
     border-image: linear-gradient(45deg, var(--primary), var(--ternary));
@@ -92,11 +99,7 @@ header nav .branding{
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: linear-gradient(45deg, var(--ternary), var(--dark));
-    filter: brightness(1.1); 
-    transition: transform 0.3s ease; 
-}
-.hero .left img:hover {
-    transform: scale(1.1);
+    filter: brightness(1.1);  
 }
 .hero .right{
     flex: 1;
@@ -128,9 +131,6 @@ header nav .branding{
 section{
     padding:6rem 0;
 }
-/*section.about .about-me-img{
-    height:450px;
-}*/
 section.about .about-me-img {
     width: auto;
     height: 450px;
@@ -143,13 +143,9 @@ section.about .about-me-img {
     filter: brightness(1.2); 
     transition: transform 0.3s ease; 
 }
-
 section.about .about-me-img:hover {
-    transform: scale(1.1); /* Add a scale effect on hover */
+    transform: scale(1.15);
 }
-
-
-
 section.about h1{
     margin-bottom: 1rem;
     font-size:1.6rem;
@@ -163,7 +159,6 @@ section.about h3{
     margin-bottom:1rem;
     font-weight: 400;
 }
-
 section.about p{
     font-family:'Lato', sans-serif;
     color:var(--ternary);
