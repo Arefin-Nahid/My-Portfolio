@@ -695,7 +695,7 @@ footer .copyright{
          flex-direction: column;
      }
      header{
-         clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
+         clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 95%, 0 100%);
      }
      .hero .right{
          position: absolute;
