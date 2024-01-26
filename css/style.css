@@ -55,7 +55,6 @@ header{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);
     }
   }
-
 header nav {
     padding:2rem 0;
 }

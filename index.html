@@ -3,24 +3,16 @@
     <head>
         <title>Arefin NahiD</title>
         <link rel="stylesheet" href="./css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="./css/utilities.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
         
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                arrows: false,
-                dots: true,
-                appendDots: '.slider-dots',
-                dotsClass: 'dots'
-            });
-        });
-        </script>
+
+        <script src="./js/app.js"></script>
     </head>
 
     <body>
@@ -57,7 +49,7 @@
                             </div>
                         </div>
                         <div class="right">
-                            <button class="btn btn-primary">Contact</button>
+                            <button id="contactButton" class="btn btn-primary">Contact</button>
                         </div>
                     </nav>
                     <div class="hero flex items-center justify-between">
@@ -69,7 +61,7 @@
                             <h1>I’m a Creative <span>Web Developer</span></h1>
                             <p>I am a dedicated and ambitious individual in the first term of my third year, actively pursuing studies in the Department of Computer Science and Engineering at Khulna University of Engineering & Technology, Bangladesh.</p>
                             <div>
-                                <button class="btn btn-secondary">DOWNLOAD CV</button>
+                                <button id="downloadCvButton" class="btn btn-secondary">DOWNLOAD CV</button>
                             </div>
                         </div>
                     </div>
@@ -194,7 +186,7 @@
             <section class="freelancer">
                 <h1>Available for Web Development Projects</h1>
                 <p>I provide high standar clean website for your business solutions</p>
-                <button class="btn btn-primary">Download CV</button>
+                <button id="downloadCvButtonFreelancer" class="btn btn-secondary">DOWNLOAD CV</button>
             </section>
 
             <section id="travelling" class="travelling">
