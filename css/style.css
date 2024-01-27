@@ -75,15 +75,12 @@ header nav .branding img:hover {
 }
 
 header nav .left a{
+    font-size: 1.2rem;
     color:var(--pure);
     text-decoration: none;
     margin-right:2rem;
     text-transform:uppercase;
     transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -ms-transition:all .3s ease;
-    -o-transition:all .3s ease;
 }
 header nav .left a:hover{
     color:var(--primary);
@@ -95,12 +92,12 @@ header nav .left a:hover{
 .hero .left img {
     width: 70%;
     height: auto;
-    border: 10px solid transparent;
-    border-image: linear-gradient(45deg, var(--primary), var(--ternary));
-    border-image-slice: 1;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, var(--ternary), var(--dark));
+    border-radius: 50%;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+    border: 5px solid var(--primary);
+    box-shadow: 0 0 10px rgba(61, 207, 211, 1);
+    transition: all 0.5s ease;
     filter: brightness(1.1);
 }
 .hero .right{
@@ -490,7 +487,7 @@ section.contact .card-wrapper .card{
     text-align: center;
 }
 section.contact .card-wrapper .card img{
-    width:40px;
+    width:25px;
     height: auto;
 }
 section.contact .card-wrapper .card h1{
@@ -551,7 +548,7 @@ footer{
 }
 footer .footer-logo{
     margin-bottom:1rem;
-    width:80px;
+    width:60px;
     height: auto;
     border: 2px solid var(--primary);
     border-radius: 50%;
