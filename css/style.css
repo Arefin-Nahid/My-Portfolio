@@ -94,7 +94,7 @@ header nav .left a:hover{
     height: auto;
     border-radius: 50%;
     margin-top: 3rem;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     border: 5px solid var(--primary);
     box-shadow: 0 0 10px rgba(61, 207, 211, 1);
     transition: all 0.5s ease;
@@ -685,6 +685,9 @@ footer .copyright{
      }
  }
  @media (max-width:576px){
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 95%, 0 100%);
+    }
      .hero{
          flex-direction: column;
      }
