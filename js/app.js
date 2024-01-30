@@ -71,10 +71,10 @@ $(document).ready(function(){
             type: 'POST',
             url: './datainfo.php',
             data: formData,
-            dataType: 'json', // Assuming you want to receive JSON response
             success: function (response) {
-                console.log(response);
-                // Handle success response as needed
+                alert(response.message);
+                // Reset the form on successful submission
+                $('.contact form')[0].reset();
             },
             error: function (error) {
                 console.error('Error:', error);
@@ -82,5 +82,4 @@ $(document).ready(function(){
             }
         });
     });
-
 });
