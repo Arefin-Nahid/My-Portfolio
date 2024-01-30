@@ -58,4 +58,29 @@ $(document).ready(function(){
         downloadLink.click();
         document.body.removeChild(downloadLink);
     });
+
+    $('.contact form').submit(function (event) {
+        event.preventDefault();
+        var formData = {
+            user: $('input[name=user]').val(),
+            email: $('input[name=email]').val(),
+            subject: $('input[name=subject]').val(),
+            message: $('textarea[name=message]').val()
+        };
+        $.ajax({
+            type: 'POST',
+            url: './datainfo.php',
+            data: formData,
+            dataType: 'json', // Assuming you want to receive JSON response
+            success: function (response) {
+                console.log(response);
+                // Handle success response as needed
+            },
+            error: function (error) {
+                console.error('Error:', error);
+                // Handle error as needed
+            }
+        });
+    });
+
 });
