@@ -6,18 +6,25 @@ $(document).ready(function(){
         dotsClass: 'dots'
     });
 
+    $(document).ready(function(){
+        var typed = new Typed(".typing", {
+            strings: ["CS Undergrad", "Web Developer", "Traveller"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true,
+            showCursor: false
+        });
+    });
+
     let hamberger = document.querySelector('.hamberger');
     let times = document.querySelector('.times');
     let mobileNav = document.querySelector('.mobile-nav');
-
     hamberger.addEventListener('click', function(){
         mobileNav.classList.add('open');  
     });
-
     times.addEventListener('click', function(){
         mobileNav.classList.remove('open');  
     });
-
     const mobileNavLinks = document.querySelectorAll('.mobile-nav ul li a');
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -25,15 +32,12 @@ $(document).ready(function(){
         });
     });
 
-
-
     document.getElementById('contactButton').addEventListener('click', function() {
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
         if (mobileNav.classList.contains('open')) {
             mobileNav.classList.remove('open');
         }
     });
-    
     const contactForm = document.querySelector('.contact form');
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -49,7 +53,7 @@ $(document).ready(function(){
         document.body.removeChild(downloadLink);
     });
 
-    $('#downloadCvButtonFreelancer').click(function() {
+    document.getElementById('downloadCvButtonFreelancer').addEventListener('click', function() {
         const pdfUrl = './js/cv.pdf';
         const downloadLink = document.createElement('a');
         downloadLink.href = pdfUrl;
@@ -73,12 +77,10 @@ $(document).ready(function(){
             data: formData,
             success: function (response) {
                 alert(response.message);
-                // Reset the form on successful submission
                 $('.contact form')[0].reset();
             },
             error: function (error) {
                 console.error('Error:', error);
-                // Handle error as needed
             }
         });
     });
