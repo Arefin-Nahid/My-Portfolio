@@ -615,7 +615,7 @@ footer .copyright{
 .hamberger img{
     width:30px;
 }
-.open {
+.mobile-nav.open {
     transform: translateX(0);
 }
 .times{
@@ -643,10 +643,10 @@ footer .copyright{
     height: 265px;
     padding: 1.5rem;
     padding-top: 1.3rem;
-    transform: translateX(200%);
-    transition: all 0.5s ease-in-out;
     flex-direction: column;
     align-items: flex-end;
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
 }
 .mobile-nav ul{
     list-style-type: none;
