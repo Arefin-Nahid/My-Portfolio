@@ -645,7 +645,7 @@ footer .copyright{
     background: linear-gradient(to right, #FFFFFF, #3DCFD3);
     width: 200px;
     height: 265px;
-    padding: 1.5rem;
+    padding: 1rem;
     padding-top: 1.3rem;
     flex-direction: column;
     align-items: flex-end;
@@ -677,7 +677,6 @@ footer .copyright{
     bottom: 0;
     right: 15px;
     background: hsl(180, 98%, 31%);
-    color: hsl(0, 0%, 100%);
     font-size: 20px;
     padding: 10px;
     border-radius:5px;
@@ -738,6 +737,9 @@ footer .copyright{
  }
 
  @media (max-width:576px){
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 95%, 0 100%);
+    }
      .hero{
          flex-direction: column;
      }
