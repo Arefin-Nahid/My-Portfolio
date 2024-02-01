@@ -82,12 +82,10 @@ $(document).ready(function () {
     });
 
     $(document).ready(function() {
-        // Smooth scroll to top when the button is clicked
         $('.go-top').on('click', function() {
             $('html, body').animate({ scrollTop: 0 }, 'slow');
         });
 
-        // Show/hide the button based on scroll position
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 $('.go-top').addClass('active');
@@ -96,5 +94,4 @@ $(document).ready(function () {
             }
         });
     });
-
 });
