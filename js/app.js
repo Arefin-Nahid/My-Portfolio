@@ -11,7 +11,7 @@ $(document).ready(function () {
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,
-        showCursor: false
+        showCursor: true
     });
 
     $('.hamberger').click(function () {
@@ -35,9 +35,24 @@ $(document).ready(function () {
 
     $('.contact form').submit(function (event) {
         event.preventDefault();
+
+        var user = $('input[name=user]').val().trim();
+        var email = $('input[name=email]').val().trim();
+
+        if (user === '' || email === '') {
+            alert('Please fill in the required fields (User and Email).');
+            return;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
         var formData = {
-            user: $('input[name=user]').val(),
-            email: $('input[name=email]').val(),
+            user: user,
+            email: email,
             subject: $('input[name=subject]').val(),
             message: $('textarea[name=message]').val()
         };
@@ -65,4 +80,21 @@ $(document).ready(function () {
         downloadLink.click();
         document.body.removeChild(downloadLink);
     });
+
+    $(document).ready(function() {
+        // Smooth scroll to top when the button is clicked
+        $('.go-top').on('click', function() {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+
+        // Show/hide the button based on scroll position
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.go-top').addClass('active');
+            } else {
+                $('.go-top').removeClass('active');
+            }
+        });
+    });
+
 });
