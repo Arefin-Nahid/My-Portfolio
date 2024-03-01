@@ -166,14 +166,21 @@
                 <div class="container">
                     <h1 class="section-heading">Explore My <span>Timeline</span></h1>
                     <div class="card-wrapper">
-                        <?php foreach ($timeline_data as $data): ?>
+                    <?php
+                        $total_items = count($timeline_data);
+                        for ($i = $total_items - 1; $i >= 0; $i--) {
+                            $data = $timeline_data[$i];
+                    ?>
                             <div class="card">
                                 <img src="<?=$data["icon"]?>" alt="">
                                 <h2><?=$data["degree"]?></h2>
                                 <p><?=$data["institude"]?></p>
                                 <h3><?=$data["passing_year"]?></h3>
                             </div>
-                        <?php endforeach; ?>
+                    <?php
+                        }
+                    ?>
+
                     </div>
                 </div>
             </section>
@@ -191,7 +198,11 @@
                     <p>Browse My Recent </p>
                     <h1 class="section-heading"><span>Projects</span></h1>
                     <div class="card-wrapper">
-                        <?php foreach ($project_data as $data): ?>
+                    <?php
+                        $total_projects = count($project_data);
+                        for ($i = $total_projects - 1; $i >= 0; $i--) {
+                            $data = $project_data[$i];
+                    ?>
                             <div class="card">
                                 <div class="img-wrapper">
                                     <img src="<?=$data["icon"]?>" alt="">
@@ -203,7 +214,10 @@
                                     <a href="<?=$data["link"]?>" target="_blank"><?=$data["link_title"]?></a>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                    <?php
+                        }
+                    ?>
+
                     </div>
                 </div>
             </section>
