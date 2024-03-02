@@ -1,17 +1,16 @@
 <?php
-    include '../index/dbconnect.inc.php';
-    if(isset($_GET['deleteid'])){
-        $id=$_GET['deleteid'];
+include "../../include/config.php";
 
-        $sql="DELETE FROM `message` where id='$id'";
-        $result=mysqli_query($conn,$sql);
-        if($result){
-            // echo "Delete Successfull";
-            header('location:../index/index_admin.php');
-        }
-        else{
-            die(mysqli_error($conn));
-        }
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
+    $id = $_POST['id'];
 
+    // Prepare and execute the SQL statement to delete the record
+    $sql = "DELETE FROM `contact_messages` WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$id]);
+
+    // Redirect back to the contact page after deletion
+    echo '<script>window.location = "../index.php#tab-contact";</script>';
+    exit;
+}
 ?>

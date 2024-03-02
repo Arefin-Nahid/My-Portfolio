@@ -84,26 +84,28 @@ table td {
 .social a {
     margin-right: 10px;
 }
-
-table tr:last-child {
-    text-align: center;
-}
+.social img {
+            width: 30px; /* Reduced size of social media icons */
+            height: 30px;
+        }
 /* Button styles */
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    padding: 10px 100px;
-}
+        .about-button {
+            text-align: center;
+        }
 
-button:hover {
-    background-color: #0056b3;
-}
+        .about-button button {
+            padding: 10px 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .about-button button:hover {
+            background-color: #45a049;
+        }
 
     </style>
 </head>
@@ -175,12 +177,13 @@ button:hover {
                     </div>
                 </div>
             </td>
+            
         </tr>
         <tr>
             <td colspan="2">
-                <form action="./crud/update.php" method="get">
-                    <button type="submit">Update</button>
-                </form>
+                <div class=about-button>
+                    <button onclick="window.location.href='../crud/update_about.php'">Update Info</button>
+                </div>
             </td>
         </tr>
     </table>

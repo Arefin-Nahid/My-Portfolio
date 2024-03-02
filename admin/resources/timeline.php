@@ -69,14 +69,17 @@
         }
 
         .update-timeline-button button {
-            padding: 10px 200px;
-            background-color: #333;
-            color: #fff;
+            padding: 10px 50px;
+            background-color: #4CAF50;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
+        }
+        .update-timeline-button button :hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -103,7 +106,7 @@
             </div>
         </div>
         <div class="update-timeline-button">
-            <button>Update Timeline</button>
+            <button onclick="window.location.href='../crud/update_timeline.php'">Update Timeline Info</button>
         </div>
     </section>
 </body>

@@ -1,9 +1,10 @@
-            <?php
-                include "../include/config.php";
-                $sql = "SELECT * FROM `achievements`";
-                $stmt = $pdo->query($sql);
-                $achievement_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            ?>
+<?php
+    include "../include/config.php";
+    $sql = "SELECT * FROM `achievements`";
+    $stmt = $pdo->query($sql);
+    $achievement_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,11 @@
     <title>Achievements</title>
     <style>
         /* styles.css */
-
+        #achievement {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -40,12 +45,25 @@
 
         .achievement-title {
             font-weight: bold;
-            color: #000; /* You can adjust the color as per your preference */
+            color: #000;
+        }
+        .achievement-button {
+            text-align: center;
+            padding: 50px;
         }
 
-        #updateButton {
-            display: block;
-            margin: 20px auto; /* Center align button */
+        .achievement-button button {
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .achievement-button button:hover {
+            background-color: #45a049;
         }
 
     </style>
@@ -62,7 +80,9 @@
                     <p><?=$achievement["details"]?></p>
                 </div>
             <?php endforeach; ?>
-            <button id="updateButton">Update Achievements</button>
+        </div>
+        <div class="achievement-button">
+            <button onclick="window.location.href='../crud/update_achievement.php'">Update Achievements</button>
         </div>
     </section>
 </body>

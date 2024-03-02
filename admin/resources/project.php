@@ -90,26 +90,23 @@
             background-color: #555;
         }
 
-        /* Styling for the footer */
-        
-        #update-container {
+        .update-button {
             text-align: center;
-            margin-top: 20px;
+            padding: 50px;
         }
 
-        button {
-            padding: 10px 200px;
-            background-color: #333;
-            color: #fff;
+        .update-button button {
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-
-        button:hover {
-            background-color: #0056b3;
+        .update-button button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -124,30 +121,29 @@
         <div class="container">
             <h1 class="section-heading">Browse My Recent <span>Projects</span></h1>
             <div class="card-wrapper">
-            <?php
-    $total_projects = count($project_data);
-    for ($i = $total_projects - 1; $i >= 0; $i--) {
-        $data = $project_data[$i];
-?>
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="<?=$data["icon"]?>" alt="">
+                <?php
+                    $total_projects = count($project_data);
+                    for ($i = $total_projects - 1; $i >= 0; $i--) {
+                    $data = $project_data[$i];
+                ?>
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="<?=$data["icon"]?>" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h1><?=$data["title"]?></h1>
+                            <h1><span><?=$data["year"]?></span></h1>
+                            <p><?=$data["details"]?></p>
+                            <a href="<?=$data["link"]?>" target="_blank"><?=$data["link_title"]?></a>
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?>
             </div>
-            <div class="card-content">
-                <h1><?=$data["title"]?></h1>
-                <h1><span><?=$data["year"]?></span></h1>
-                <p><?=$data["details"]?></p>
-                <a href="<?=$data["link"]?>" target="_blank"><?=$data["link_title"]?></a>
+            <div>
+            <button class="update-button" onclick="location.href='../crud/update_project'">Update Projects Info</button>
             </div>
-        </div>
-<?php
-    }
-?>
-
-            </div>
-        </div>
-        <div class="container" id="update-container">
-            <button id="update-button" onclick="location.href='../crud/update_project'">Update</button>
         </div>
     </section>
     

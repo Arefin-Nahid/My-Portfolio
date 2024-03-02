@@ -37,14 +37,17 @@
         }
 
         .travelling-button button {
-            padding: 10px 200px;
-            background-color: #333;
-            color: #fff;
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
+        }
+        .travelling-button button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -73,7 +76,7 @@
                 <?php endforeach; ?>
             </div>
             <div class="travelling-button">
-                <button onclick="window.location.href='../crud/update_travelling.php'">Update</button>
+                <button onclick="window.location.href='../crud/update_travelling.php'">Update Travelling Info</button>
             </div>
         </div>
     </section>

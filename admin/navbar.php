@@ -11,27 +11,27 @@ echo '
 						<span class="nav_logo-name">Admin Panel</span> </a>
 						
 						<div class="nav_list"> 
-						<a href="#" class="nav_link active" data-tab="#tab-home"> 
+						<a href="#tab-home" class="nav_link active" data-tab="#tab-home"> 
 						<i class="bx bx-grid-alt nav_icon"></i> 
 						<span class="nav_name">Home</span> </a> 
 						
-						<a href="#" class="nav_link" data-tab="#tab-timeline"> 
+						<a href="#tab-timeline" class="nav_link" data-tab="#tab-timeline"> 
 						<i class="bx bx-book-alt nav_icon"></i> 
 						<span class="nav_name">Timeline</span> </a> 
 						
-						<a href="#" class="nav_link" data-tab="#tab-project"> 
+						<a href="#tab-project" class="nav_link" data-tab="#tab-project"> 
 						<i class="bx bx-money-withdraw"></i> 
 						<span class="nav_name">Projects</span></a> 
 						
-						<a href="#" class="nav_link" data-tab="#tab-achievement"> 
+						<a href="#tab-achievement" class="nav_link" data-tab="#tab-achievement"> 
 						<i class="bx bx-bar-chart-alt-2 nav_icon">
 						</i> <span class="nav_name">Achievements</span> </a>
 						
-						<a href="#" class="nav_link" data-tab="#tab-travelling"> 
+						<a href="#tab-travelling" class="nav_link" data-tab="#tab-travelling"> 
 						<i class="bx bx-bar-chart-alt nav_icon">
 						</i> <span class="nav_name">Travelling</span> </a> 
 						
-						<a href="#" class="nav_link" data-tab="#tab-contact"> 
+						<a href="#tab-contact" class="nav_link" data-tab="#tab-contact"> 
 						<i class="bx bx-atom">
 						</i> <span class="nav_name">Contact</span> </a> 
 					</div>

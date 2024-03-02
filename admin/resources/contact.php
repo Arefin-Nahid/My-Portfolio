@@ -30,11 +30,6 @@
             margin: auto;
         }
 
-        p {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
         .section-heading{
             text-align: center;
             margin-bottom: 50px;
@@ -113,7 +108,7 @@
 .update-button {
     background-color: #4CAF50;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 40px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -175,7 +170,7 @@
                         <td><?= $row['subject'] ?></td>
                         <td><?= $row['message'] ?></td>
                         <td>
-                            <form action="delete.php" method="post">
+                            <form action="../admin/crud/delete_message.php" method="post">
                                 <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                 <button class="delete-button" type="submit">Delete</button>
                             </form>
@@ -186,7 +181,10 @@
         </table>
         
         <!-- Update Button -->
-        <button class="update-button">Update Contact Info</button>
+        
+    </div>
+    <div class="contact-button">
+        <button class="update-button" onclick="window.location.href='../admin/crud/update_contact.php'">Update Contact Info</button>
     </div>
 </section>
 
