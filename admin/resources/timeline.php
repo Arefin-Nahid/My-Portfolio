@@ -97,7 +97,7 @@
                 </div>
             </div>
             <div class="update-timeline-button">
-                <button onclick="window.location.href='../crud/update_timeline.php'">Update Timeline Info</button>
+                <button onclick="window.location.href='./crud/update_timeline.php'">Update Timeline Info</button>
             </div>
         </section>
     </body>
