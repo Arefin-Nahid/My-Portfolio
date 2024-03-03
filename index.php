@@ -235,13 +235,19 @@
                     <p>Find Out About My </p>
                     <h1 class="section-heading"><span>Achievements</span></h1>
                     <div class="slider">
-                        <?php foreach ($achievement_data as $data): ?>
+                    <?php 
+                        for ($i = count($achievement_data) - 1; $i >= 0; $i--) {
+                            $data = $achievement_data[$i];
+                        ?>
                             <div class="slide">
-                                <img src="<?=$data["icon"]?>" alt="">
-                                <span><?=$data["title"]?></span>
-                                <p><?=$data["details"]?></p>
+                                <img src="<?= $data["icon"] ?>" alt="">
+                                <span><?= $data["title"] ?></span>
+                                <p><?= $data["details"] ?></p>
                             </div>
-                        <?php endforeach; ?>
+                        <?php 
+                        }
+                    ?>
+
                     </div>
                     <div class="slider-dots"></div>
                 </div>
