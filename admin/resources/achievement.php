@@ -82,7 +82,7 @@
                 ?>
             </div>
             <div class="achievement-button">
-                <button onclick="window.location.href='../crud/update_achievement.php'">Update Achievements</button>
+                <button onclick="window.location.href='./crud/update_achievement.php'">Update Achievements</button>
             </div>
         </section>
     </body>

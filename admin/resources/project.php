@@ -125,7 +125,7 @@
                     ?>
                 </div>
                 <div>
-                <button class="update-button" onclick="location.href='../crud/update_project'">Update Projects Info</button>
+                <button class="update-button" onclick="location.href='./crud/update_project.php'">Update Projects Info</button>
                 </div>
             </div>
         </section>
